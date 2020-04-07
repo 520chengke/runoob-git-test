@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        //设计一个url的正则
+     var text = 'http://www.baidu.comhttps://www.baidu.comftp://www.baidu.comwww.baidu.comhttp://baidu.comhttp://www.baidu.com.cnhttp://www.baidu.com?http://www.baidu.com?username=adminhttp://www.baidu.com?username=admin&pw=12345http://www.baidu.com?username=admin&pw=12345#hellohttp://www.baidu.com?username=admin&pw=12345#牛皮的人'
+     
+     var exp = /((http|https|ftp):\/\/)?([\w\-]+\.)+([\w\-])+[\?\#\w\-\&\=\u4e00-\u9fa5\@\~\:\%]*/ig;
+
+     console.log(text.match(exp));
+    </script>
+</body>
+</html>
