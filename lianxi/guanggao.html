@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告</title>
+</head>
+<body>
+    <script>
+        var subwin = null;
+        setTimeout(function(){
+        subwin = window.open('','_blank','width=300,height=300,left=0,top=0')
+        var x = window.outerWidth/2-subwin.outerWidth/2;
+        var y = window.outerHeight/2-subwin.outerHeight/2;
+        subwin.moveTo(x,y);
+        },3000);
+
+        setTimeout(function(){
+            if(subwin.close)
+            subwin.close();
+        },8000);
+    </script>
+</body>
+</html>
